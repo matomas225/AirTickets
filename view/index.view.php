@@ -11,10 +11,6 @@
         <h1>Air Tickets</h1>
         <form action="" method="post">
             <div class="form-group">
-                <label for="skrydis">Skrydzio Nr</label>
-                <input type="text" class="form-control" id="skrydis" aria-describedby="skrydis" name="skrydis">
-            </div>
-            <div class="form-group">
                 <label for="kodas">Asmens Kodas</label>
                 <input type="text" class="form-control" id="kodas" aria-describedby="kodas" name="kodas">
             </div>
@@ -27,16 +23,22 @@
                 <input type="text" class="form-control" id="pavarde" aria-describedby="pavarde" name="pavarde">
             </div>
             <div class="form-group">
-                <label for="is">Is Kur Skrenda</label>
-                <input type="text" class="form-control" id="is" aria-describedby="is" name="is">
+                <label for="isKur">Is Kur Skrenda</label>
+                <select class="form-control" id="isKur">
+                <option><?=$data[0]?></option>
+                <option><?=$data[1]?></option>
+                <option><?=$data[2]?></option>
+                <option><?=$data[3]?></option>
+             </select>
             </div>
             <div class="form-group">
-                <label for="i">I Kur Skrenda</label>
-                <input type="text" class="form-control" id="i" aria-describedby="i" name="i">
-            </div>
-            <div class="form-group">
-                <label for="kaina">Kaina</label>
-                <input type="text" class="form-control" id="kaina" aria-describedby="kaina" name="kaina">
+                <label for="iKur">I Kur Skrenda</label>
+                <select class="form-control" id="iKur">
+                <option><?=$data[0]?></option>
+                <option><?=$data[1]?></option>
+                <option><?=$data[2]?></option>
+                <option><?=$data[3]?></option>
+             </select>
             </div>
             <div class="form-group">
                 <label for="svoris">Svoris</label>
@@ -46,14 +48,10 @@
                 <label for="pastabos">Pastabos</label>
                 <input type="text" class="form-control" id="pastabos" aria-describedby="pastabos" name="pastabos">
             </div>
-                <select class="form-control" name="user" id="user" name="user">
-                    <?php foreach($users as $user):?>
-                    <option value="<?=$user;?>"><?=$user?></option>
-                    <?php endforeach;?>
-                </select>
-            </div>
-            <button type="submit" class="btn btn-primary" name="confirm">Spausdinti</button>
+            <button onclick="openInNewTab('view/ticket.php')" type="submit" class="btn btn-primary" name="confirm">Spausdinti</button>
         </form>
+        
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
